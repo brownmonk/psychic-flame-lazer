@@ -1,0 +1,37 @@
+{{!< default}}
+{{> header}}
+
+<main class="main_psychic" role="main">
+
+    {{#foreach posts}}
+
+    <article class="article_psychic" role="article" itemscope itemtype="http://schema.org/Article">
+        <header class="postheader_psychic">
+            <time class="date_psychic" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+                {{date format='dddd DD MMM YYYY'}}
+            </time>
+            <h1 class="posttitle_psychic" itemprop="headline">
+                <a href="{{{url}}}" rel="bookmark">{{title}}</a>
+            </h1>
+        </header>
+
+        <div class="postcontent_psychic" itemprop="articleBody">
+            {{content}}
+        </div>
+
+        {{#if tags}}
+        <div class="posttags_psychic">
+            Tags: {{tags separator=" | "}}
+        </div>
+        {{/if}}
+    </article>
+    {{/foreach}}
+
+    {{#if pagination}}
+    <div class="pagination_psychic">
+        {{{pagination}}}
+    </div>
+    {{/if}}
+</main>
+
+{{> footer}}

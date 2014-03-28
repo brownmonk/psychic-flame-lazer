@@ -1,0 +1,126 @@
+//**
+// Styles
+//**
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+hr {
+  .HRColor;
+  .box-sizing(content-box);
+  height: 0;
+  display: block;
+  margin: @golden + 0em 0;
+  padding: 0;
+  font-size: @golden + 0em;
+}
+
+.wrapper_psychic {
+  width:100%;
+  max-width: @readable_width;
+  margin: 0 auto;
+  padding-bottom: @add_padding / 2 + 0em;
+  position: relative;
+  z-index: 1;
+}
+
+.header_psychic {
+  .HeaderColor;
+  text-align: center;
+  padding-top: 1.5 * @golden + 0em;
+  padding-bottom: 3 * @golden + 0em;
+  margin-bottom: 0.25em;
+}
+
+.postheader_psychic {
+  .PostHeaderColor;
+  position: relative;
+  display: block;
+  text-align: center;
+  z-index: 5;
+}
+
+
+.article_psychic {
+  .ArticleColor;
+  padding: @golden + 0em @add_padding + 0em @add_padding + 0em @add_padding + 0em;
+  margin-bottom: 0.25em;
+}
+
+.postcontent_psychic {
+  padding-top: 0.5em;
+}
+
+.footer_psychic {
+  .FooterColor;
+  margin: @add_padding / 4 + 0em 0;
+}
+
+.pagination_psychic {
+  .PaginationColor;
+  text-align: center;
+  padding: @golden / 2 + 0em @golden + 0em;
+}
+
+.posttags_psychic {
+  margin-top: 2 * @golden + 0em;
+  font-style: italic;
+}
+
+.sharepost_psychic {
+  .SharePostColor;
+  margin: @golden + 0em 0 2 * @golden + 0em 0;
+  padding: @golden + 0em;
+}
+
+h4.share_psychic {
+  margin: 0 0.5em 0 0;
+}
+
+.share_psychic {
+  float: left;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.authorimage_psychic {
+  .AuthorImageColor;
+  float: left;
+  line-height: 0;
+  margin-right: @golden + 0em;
+  padding: 0.25em;
+  .border-radius(50%);
+  img {
+    .border-radius(50%);
+  }
+}
+
+h4.authorname_psychic {
+  margin:0;
+}
+
+.postfooter_psychic {
+  position: relative;
+}
+
+/* CLEAR - for modern awesome browsers */
+.sharepost_psychic:before,
+.sharepost_psychic:after,
+.postfooter_psychic:before,
+.postfooter_psychic:after {
+  content: "";
+  display: table;
+}
+.sharepost_psychic:after,
+.postfooter_psychic:after {
+  clear: both;
+}
+/* CLEAR - for IE 6/7 (trigger hasLayout) */
+.ie .sharepost_psychic,
+.ie .postfooter_psychic {
+  zoom: 1;
+}
+

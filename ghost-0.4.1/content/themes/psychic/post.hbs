@@ -1,0 +1,52 @@
+{{!< default}}
+{{> header}}
+
+<main class="main_psychic" role="main">
+    {{#post}}
+    <article class="article_psychic" role="article" itemscope itemtype="http://schema.org/Article">
+        <header class="postheader_psychic">
+            <time class="date_psychic" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+                {{date format='dddd DD MMM YYYY'}}
+            </time>
+            <h1 class="posttitle_psychic" itemprop="headline">{{title}}</h1>
+        </header>
+        <div class="postcontent_psychic" itemprop="articleBody">
+            {{content}}
+        </div>
+        {{#if tags}}
+        <div class="posttags_psychic">
+            Tags: {{tags separator=" | "}}
+        </div>
+        {{/if}}
+        <div class="sharepost_psychic">
+            <h4 class="share_psychic">Share this post: &nbsp;</h4>
+            <a class="share_psychic icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hidethis_psychic">Twitter</span></a>
+            <a class="share_psychic icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hidethis_psychic">Facebook</span></a>
+            <a class="share_psychic icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hidethis_psychic">Google+</span></a>
+        </div>
+        {{#if author}}
+        <footer class="postfooter_psychic">
+            <address itemscope itemtype="http://schema.org/Person">
+                {{#if author.image}}
+                <div class="authorimage_psychic"><img src="{{author.image}}" itemprop="image" /></div>
+                {{/if}}
+                <h4 class="authorname_psychic"><span itemprop="author">{{author.name}}</span></h4>
+                {{#if author.website}}
+                <div class="authorwebsite_psychic"><a href="{{author.website}}" itemprop="url">{{author.website}}</a></div>
+                {{/if}}
+            </address>
+            <div class="authorbio_psychic">
+                <p>{{author.bio}}</p>
+            </div>
+        </footer>
+        {{/if}}
+    </article>
+    {{/post}}
+    {{#if pagination}}
+    <div class="pagination_psychic">
+        {{{pagination}}}
+    </div>
+    {{/if}}
+</main>
+
+{{> footer}}
